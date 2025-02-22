@@ -1,11 +1,10 @@
-
 r = 0
 n = 4
-while r != 88   :
-    s = "3" + "5" * n
+while r != 64   :
+    s = "5" + "2" * n
     while ("52" in s) or ("1122" in s) or ("2222" in s):
         if "52" in s:
-            s = s.replace("52", '1', 1)
+            s = s.replace("52", '11', 1)
         if "2222" in s:
             s = s.replace("2222", "5", 1)
         if "1122" in s:
