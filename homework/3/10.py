@@ -14,7 +14,7 @@ def find_min_n():
                 if bit == '0':
                     odd_zeros += 1
         r = abs(even_ones - odd_zeros)
-        if r == 8:
+        if r == 5:
             return n
         n += 1
 
