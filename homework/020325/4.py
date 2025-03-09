@@ -1,6 +1,6 @@
 res = []
-for A in range(0, 1000):
-    for x in range(0, 1000):
+for A in range(1, 1000):
+    for x in range(1, 1000):
         flag = 1
         f = (((A + x) < 123) <= ((x % 5 == 0) <= (not(x % 7 == 0))))
         if f == 0:

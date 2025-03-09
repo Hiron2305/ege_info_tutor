@@ -8,11 +8,12 @@ def check(a, b, c, maxx):
 nums = []
 
 with open("25.txt") as file:
-    for i in range(6635):
+    for i in range(6634):
         a = file.readline()
         nums.append(int(a))
 
 maxx = max(x for x in nums if str(x)[-2:] == "09")
+print(type(x for x in nums if str(x)[-2:] == "09"))
 counter = 0
 max_sum = -10000
 for i in range(0, len(nums) - 2):
@@ -21,8 +22,7 @@ for i in range(0, len(nums) - 2):
     c = nums[i + 2]
     if check(a,b,c,maxx):
         counter += 1
-        if (a + b + c) > max_sum:
-            max_sum = a + b + c
+        if (a * b * c) > max_sum:
+            max_sum = a * b * c
 
 print(counter, max_sum)
-

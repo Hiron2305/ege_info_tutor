@@ -20,15 +20,20 @@ with open("26.txt") as file:
 
 maxx = max(x for x in nums)
 counter = 0
-max_sum = -10000
+max_sum = 0
 for i in range(0, len(nums) - 2):
     a = nums[i]
     b = nums[i + 1]
     c = nums[i + 2]
     if check(a,b,c,maxx):
         counter += 1
-        if (a + b + c) > max_sum:
-            max_sum = a + b + c
+    if (a >= 0 and (sqrt(a) == int(sqrt(a)))):
+        max_sum += a
+    elif (b >= 0 and sqrt(b) == int(sqrt(b))):
+        max_sum += b
+    elif (c >= 0 and sqrt(c) == int(sqrt(c))):
+        max_sum += c
+
 
 print(counter, max_sum)
 
