@@ -7,8 +7,8 @@ def check(a, b, minn, maxx):
 
 nums = []
 
-with open("22.txt") as file:
-    for i in range(9930):
+with open("24.txt") as file:
+    for i in range(9929):
         a = file.readline()
         nums.append(int(a))
 

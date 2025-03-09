@@ -7,7 +7,7 @@ def check(a, b, c, maxx):
 
 nums = []
 
-with open("23.txt") as file:
+with open("25.txt") as file:
     for i in range(6635):
         a = file.readline()
         nums.append(int(a))
