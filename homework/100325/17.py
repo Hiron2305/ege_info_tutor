@@ -1,12 +1,14 @@
 nums = []
-max_13 = 0
+max_13 = -1000000
 with open("17.txt") as file:
     for i in range(6646):
-        a = file.readline()
+        a = file.readline().rstrip()
         nums.append(int(a))
 
-        if a[-2:] == "13" and a > max_13:
+
+        if (a[-2:] == "13") and (int(a) > max_13):
             max_13 = int(a)
+
 counter = 0
 min_sum = 1000000
 for i in range(len(nums) - 2):
@@ -19,4 +21,4 @@ for i in range(len(nums) - 2):
             if (a + b + c) < min_sum:
                 min_sum = (a + b + c)
 
-print(counter, min_sum) # 1 -92695
+print(counter, min_sum) # 909 -92695
