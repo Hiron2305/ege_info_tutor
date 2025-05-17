@@ -6,11 +6,11 @@ total = sum(prices)
 
 prices.sort(reverse=True)
 
-discount_best = sum(prices[i] // 2 for i in range(5, len(prices), 6))
+discount_best = sum(prices[i] / 2 for i in range(5, len(prices), 6))
 total_best = total - discount_best
 
 prices.sort()
-discount_worst = sum(prices[i] // 2 for i in range(5, len(prices), 6))
+discount_worst = sum(prices[i] / 2 for i in range(0, len(prices), 6))
 total_worst = total - discount_worst
 
 print(total_best, total_worst)
