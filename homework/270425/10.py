@@ -11,7 +11,7 @@ for idx in range(len(pos) - 20):
     start = pos[idx]
     end = pos[idx+20] + 1
     left = start
-    while left > 0 and s[left-1] != '0':
+    while left > 0 and s[left-1] != 'O':
         left -= 1
     if idx+21 < len(pos):
         right = pos[idx+21]
